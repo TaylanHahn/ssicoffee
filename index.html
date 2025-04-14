@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shoticon icon" href="/archive/logo_principal.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carousel.css">
+    <title>SSI Cafeteria</title>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO-->
+    <header>
+        <img src="archive/logo_alt1.png" alt="Logo da SSI Coffee Shop" class="header-logo">
+
+        <nav>
+            <a href="#cafes">Cafés</a>
+            <a href="#doces-salgados">Doces & Salgados</a>
+            <a href="">Quem Somos</a>
+            <a href="">Contato</a>
+        </nav>
+    </header>
+
+    <!-- background dos grãos-->
+    <div class="graos"></div>
+
+    <main>
+        <!-- CARDS -->
+        <section class="cards">
+            <section class="card">
+                <img src="/archive/card2.png" alt="">
+                <h2>Para toda hora</h2>
+                <p>Café é sempre uma boa ideia né. Que tal uma xícara de café agora?</p>
+                <button class="card-button">Eu quero!</button>
+            </section>
+
+            <section class="card">
+                <img src="/archive/card1.png" alt="">
+                <h2>Take-away</h2>
+                <p>Praticidade no dia a dia. Seu café favorito, te acompanhando onde for.</p>.
+                <button class="card-button">Peça o seu!</button>
+            </section>
+
+            <section class="card">
+                <img src="/archive/card3.png" alt="">
+                <h2>O pedido ideal</h2>
+                <p>Café bom, é café acompanahdo. Os melhores salgados e doces pra você.</p>
+                <button class="card-button">Confira!</button>
+            </section>
+        </section>
+
+        <!-- CAFÉS -->
+        <section class="cardapio" id="cafes">
+            <h2>Cafés</h2>
+            <h3>A experiência perfeita começa aqui.</h3>
+            <p>Na SSI Cafeteria, cada xícara é um convite para descobrir o verdadeiro sabor do café. Selecionamos os
+                grãos mais finos, cultivados com paixão e torrados com precisão, garantindo um equilíbrio impecável
+                entre aroma, textura e sabor. Aqui, o café é mais do que uma bebida: é uma arte que se revela em cada
+                detalhe.</p>
+        </section>
+
+        <!-- cardápio de cafés -->
+        <div class="cardapioImg">
+            <div style="background-image: url(/archive/cardapioCafes/cappuccino.png);"></div>
+            <div style="background-image: url(/archive/cardapioCafes/latte_macchiatto.png);"></div>
+            <div style="background-image: url(/archive/cardapioCafes/expresso.png);"></div>
+            <div style="background-image: url(/archive/cardapioCafes/mocha.png);"></div>
+            <div style="background-image: url(/archive/cardapioCafes/frappe.png);"></div>
+        </div>
+
+        <!-- DOCES & SALGADOS -->
+        <section class="cardapio" id="doces-salgados">
+            <h2>Doces e Salgados</h2>
+            <h3>A harmonia perfeita está aqui.</h3>
+            <p>Na SSI Cafeteria, os acompanhamentos são tão especiais quanto o próprio café. Nossos bolos são feitos com
+                ingredientes selecionados, trazendo o equilíbrio ideal entre textura e sabor. Já os salgados são
+                preparados com cuidado artesanal, garantindo crocância, frescor e recheios generosos que conquistam cada
+                paladar. Cada mordida é uma celebração de qualidade, pensada para tornar sua experiência ainda mais
+                saborosa. Aqui, café e companhia formam uma dupla imbatível.</p>
+        </section>
+
+        <!-- cardápio de doces e salgados -->
+        <div class="cardapioImg">
+            <div style="background-image: url(/archive/cardapioDS/queijudos.png);"></div>
+            <div style="background-image: url(/archive/cardapioDS/croissant.png);"></div>
+            <div style="background-image: url(/archive/cardapioDS/tortas.png);"></div>
+            <div style="background-image: url(/archive/cardapioDS/cookies.png);"></div>
+            <div style="background-image: url(/archive/cardapioDS/sanduiche.png);"></div>
+        </div>
+
+        <div class="carousel">
+            <div class="carousel-inner">
+              <!-- View 1: Arte da Cafeteria -->
+              <div class="carousel-item">
+                <a href="#cafes">
+                  <img src="/archive/cardapioCafes/cappuccino.png" alt="Arte da Cafeteria" />
+                </a>
+              </div>
+              <!-- View 2: Vídeo para o YouTube -->
+              <div class="carousel-item">
+                <a href="https://youtu.be/wXpdFNe4Ejw?si=VYrFKCUH7gCbH2-R" target="_blank">
+                  <img src="/archive/cafevideoYT.png" alt="Vídeo do YouTube" />
+                </a>
+              </div>
+              <!-- View 3: Foto com chamada -->
+              <div class="carousel-item">
+                <a href="#doces-salgados">
+                  <img src="/archive/cardapioDS/queijudos.png" alt="Produto para compra" />
+                  <p>Compre agora!</p>
+                </a>
+              </div>
+            </div>
+            <button class="prev-btn">❮</button>
+            <button class="next-btn">❯</button>
+          </div>
+
+    </main>
+
+    <footer>
+        <!-- roadmap do site -->
+    </footer>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
