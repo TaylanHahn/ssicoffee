@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pedido.css">
+    <title>Pedido | SSI Cafeteria</title>
+</head>
+
+<body>
+    <!-- CABEÇALHO-->
+    <header>
+        <a href="index.html"><img src="archive/logo_alt1.png" alt="Logo da SSI Coffee Shop" class="header-logo"></a>
+        <nav>
+            <a href="index.html#cafes">Cafés</a>
+            <a href="index.html#doces-salgados">Doces & Salgados</a>
+            <a href="">Quem Somos</a>
+            <a href="">Contato</a>
+        </nav>
+    </header>
+
+    <!-- background dos grãos-->
+    <div class="graos"></div>
+
+
+    <section class="formPedido">
+        <h1>Faça seu Pedido</h1>
+        <p>Clique no botão "Adicionar Item" para iniciar o pedido.</p>
+        <form id="pedido-form">
+            <div id="itens-container"></div>
+
+            <div class="buttons">
+                <button type="button" onclick="adicionarItem()" class="addItem">Adicionar Item</button>
+                <button type="button" onclick="mostrarResumo()" class="concluir">Concluir Pedido</button>
+            </div>
+
+        </form>
+
+        <div id="resumo-pedido" style="display: none;">
+            <h2>Resumo do Pedido</h2>
+            <ul id="lista-pedido"></ul>
+            <p id="valor-total"></p>
+
+            <div class="editarFinalizar">
+                <button onclick="editarPedido()" class="editar">Editar Pedido</button>
+                <button onclick="mostrarEntrega()" class="finalizar">Finalizar Pedido</button>
+            </div>
+        </div>
+
+        <div id="entrega-pagamento" style="display: none;">
+            <h2>Entrega e Pagamento</h2>
+            <label>
+                <h3>Endereço para entrega:</h3>
+                <select id="entrega">
+                    <option value="retirada">Retirada na loja</option>
+                    <option value="delivery">Delivery</option>
+                </select>
+            </label>
+            <br />
+
+            <div id="campo-endereco" style="display: none;">
+                <label>
+                    <input type="text" id="endereco" placeholder="Informe seu endereco completo" />
+                </label>
+            </div>
+            <br />
+
+            <label>
+                <h3>Forma de pagamento:</h3>
+                <select id="pagamento">
+                    <option value="pix">Pix</option>
+                    <option value="cartao">Cartão</option>
+                    <option value="dinheiro">Dinheiro</option>
+                </select>
+            </label>
+            <br />
+            <button onclick="finalizar()" class="fim">Comprar!</button>
+        </div>
+
+        <div id="finalizado" style="display: none;">
+            <h2>Pedido Finalizado</h2>
+            <p>Obrigado por escolher a SSI Cafeteria. <br> Volte sempre! 😊☕</p>
+            <a href="index.html" class="voltar"> Página inicial</a>
+        </div>
+    </section>
+
+    <script src="pedido.js"></script>
+
+</body>
+
+</html>
