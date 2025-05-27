@@ -37,7 +37,7 @@
 
   <!-- CABEÇALHO-->
   <header>
-    <a href="#quem-somos"><img src="archive/logo_alt1.png" alt="Logo da SSI Coffee Shop" class="header-logo"></a>
+    <a href="#quem-somos"><img src="archive/logo_alt1.png" alt="Logo da SSI Coffee Shop" class="header-logo" id="topo"></a>
 
     <nav>
       <a href="pedido.html" class="botaoPedido">Fazer pedido</a>
@@ -123,6 +123,8 @@
       <div style="background-image: url(/archive/cardapioCafes/frappe.png);"></div>
     </div>
 
+    <a href="pedido.html" class="botaoPedido2">Fazer pedido</a>
+
     <!-- DOCES & SALGADOS -->
     <section class="cardapio" id="doces-salgados">
       <h2>Doces e Salgados</h2>
@@ -142,6 +144,10 @@
       <div style="background-image: url(/archive/cardapioDS/cookies.png);"></div>
       <div style="background-image: url(/archive/cardapioDS/sanduiche.png);"></div>
     </div>
+
+
+    <a href="pedido.html" class="botaoPedido2">Fazer pedido</a>
+
 
     <section class="quemSomos" id="quem-somos">
       <h2>Quem somos</h2>
@@ -178,6 +184,8 @@
     </section>
   </main>
 
+  <a href="#topo" class="botaoPedido3" style="scroll-behavior: smooth;">Voltar para o topo</a>
+
   <footer id="contato">
     <!-- roadmap do site -->
     <div class="roadmap">
@@ -199,10 +207,13 @@
 
     <img src="/archive/logo_branca.png" alt="">
 
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1411.0487027971126!2d-51.221550492031376!3d-30.02542889694248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197909d7d74d6d%3A0x895a83e635786474!2sR.%20Comendador%20Manoel%20Pereira%2C%2090%20-%20Centro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS%2C%2090030-010!5e0!3m2!1spt-BR!2sbr!4v1747093609001!5m2!1spt-BR!2sbr"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="mapaFooter">
+      <h4>Nos localize no mapa abaixo:</h4>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1411.0487027971126!2d-51.221550492031376!3d-30.02542889694248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197909d7d74d6d%3A0x895a83e635786474!2sR.%20Comendador%20Manoel%20Pereira%2C%2090%20-%20Centro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS%2C%2090030-010!5e0!3m2!1spt-BR!2sbr!4v1747093609001!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </footer>
 
   <script src="main.js"></script>

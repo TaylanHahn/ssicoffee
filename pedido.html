@@ -4,8 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="shoticon icon" href="/archive/logo_principal.png">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="pedido.css">
+
+    <!-- ACESSIBILIDADE -->
+    <script src="https://cdn.userway.org/widget.js" data-account="kCDHqw9ltL"></script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!-- LIBRAS -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
     <title>Pedido | SSI Cafeteria</title>
 </head>
 
@@ -24,18 +47,17 @@
     <!-- background dos grãos-->
     <div class="graos"></div>
 
-
     <section class="formPedido">
         <h1>Faça seu Pedido</h1>
         <p>Clique no botão "Adicionar Item" para iniciar o pedido.</p>
         <form id="pedido-form">
+
             <div id="itens-container"></div>
 
             <div class="buttons">
                 <button type="button" onclick="adicionarItem()" class="addItem">Adicionar Item</button>
                 <button type="button" onclick="mostrarResumo()" class="concluir">Concluir Pedido</button>
             </div>
-
         </form>
 
         <div id="resumo-pedido" style="display: none;">
@@ -58,14 +80,14 @@
                     <option value="delivery">Delivery</option>
                 </select>
             </label>
-            <br />
+            <br>
 
             <div id="campo-endereco" style="display: none;">
                 <label>
-                    <input type="text" id="endereco" placeholder="Informe seu endereco completo" />
+                    <input type="text" id="endereco" placeholder="Informe seu endereco completo">
                 </label>
             </div>
-            <br />
+            <br>
 
             <label>
                 <h3>Forma de pagamento:</h3>
@@ -75,7 +97,7 @@
                     <option value="dinheiro">Dinheiro</option>
                 </select>
             </label>
-            <br />
+            <br>
             <button onclick="finalizar()" class="fim">Comprar!</button>
         </div>
 
@@ -86,8 +108,36 @@
         </div>
     </section>
 
-    <script src="pedido.js"></script>
+    <footer id="contato">
+        <!-- roadmap do site -->
+        <div class="roadmap">
+            <h4>Navegue pelo site</h4>
+            <ul>
+                <li><a href="pedido.html">FAÇA SEU PEDIDO</a></li>
+                <li><a href="#cafes">Cardápio de Cafés</a></li>
+                <li><a href="#doces-salgados">Doces & Salgados</a></li>
+                <li><a href="#quem-somos">Conheça nossa história</a></li>
+                <li><a href="index.html">Volte para o início</a></li>
+            </ul>
+            <br>
+            <h4>Contatos</h4>
+            <p>Telefone: (51) 3456-7890</p>
+            <p>Whatsapp: (51) 9 8765-4321</p>
+            <p>E-mail: contato@ssicafeteria.com.br</p>
+        </div>
 
+        <img src="/archive/logo_branca.png" alt="">
+
+        <div class="mapaFooter">
+            <h4>Nos localize no mapa abaixo:</h4>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1411.0487027971126!2d-51.221550492031376!3d-30.02542889694248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197909d7d74d6d%3A0x895a83e635786474!2sR.%20Comendador%20Manoel%20Pereira%2C%2090%20-%20Centro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS%2C%2090030-010!5e0!3m2!1spt-BR!2sbr!4v1747093609001!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+
+    <script src="pedido.js"></script>
 </body>
 
 </html>

@@ -1,9 +1,88 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: ssi;
+    src: url(/fonts/narniaBLL.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*--------------- Cabeçalho -----------------*/
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: hsla(55, 39%, 89%, 0.9);
+    padding: 2%;
+}
+
+header img {
+    width: 300px;
+}
+
+
+
+header nav {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    margin: auto;
+    text-align: right;
+    z-index: 1;
+}
+
+nav a {
+    padding: 5%;
+    color: #9b4415;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    opacity: 0.8;
+    color: #000000;
+}
+
+.botaoPedido {
+    background-color: #9b4415;
+    border: none;
+    color: #ffffff;
+    padding: 1.5%;
+    border-radius: 30px;
+    width: 12%;
+    margin: 1%;
+    font-family: sans-serif;
+    font-size: 1.4em;
+    text-decoration: none;
+}
+
+.botaoPedido:hover{
+    background-color: #000000;
+    color: #bf825c;
+}
+
+/*--------------- bg graos -----------------*/
+
 .graos {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 40%;
+    background-image: url(/archive/graoscafe.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
 }
+
+
 
 h1,
 h2 {
@@ -25,11 +104,10 @@ p {
     display: flex;
     flex-direction: column;
     align-items: space-between;
-    margin: 5% auto;
-    width: 60%;
+    margin: 15% auto;
+    width: 50%;
     text-align: center;
 }
-
 
 .addItem {
     margin: 1%;
@@ -208,4 +286,85 @@ a.voltar {
 
 .voltar:hover {
     color: #000000;
+}
+
+/*------------ FOOTER / Contatos ------------*/
+
+footer{
+    width: 100%;
+    height: 100%;
+    background-color: #9b4415;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
+
+.roadmap{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-family: sans-serif;
+    font-size: 1em;
+    margin: auto;
+    padding: 1%;
+}
+
+.roadmap a{
+    text-decoration: none;
+    color: #EDEBD7;
+    text-align: left;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.roadmap a:hover{
+    color: #bf825c;
+}
+
+.roadmap li{
+    list-style: none;
+    text-align: left;
+    margin: 0;
+}
+
+.roadmap h4{
+    font-family: ssi, sans-serif;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.roadmap p{
+    color: #f0f8ff;
+    text-align: left;
+    font-size: 1.3em;
+}
+
+footer img{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    padding: 1%;
+    margin: auto;
+}
+
+footer iframe{
+    position: relative;
+    border: none;
+    justify-content: left;
+    margin: auto;
+    padding: 5%;
+}
+
+.mapaFooter{
+    width: 40%;
+    margin: 5% auto;
+}
+
+.mapaFooter h4{
+    font-family: ssi, sans-serif;
+    margin: 0;
+    padding: 1%;
+    text-align: center;
+    font-size: 1.4em;
 }
