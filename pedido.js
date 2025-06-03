@@ -104,5 +104,42 @@ document.getElementById("entrega").addEventListener("change", function () {
   } else {
     campoEndereco.style.display = "none";
   }
+})
+
+document.getElementById("pagamento").addEventListener("change", function () {
+  const cartaoDados = document.getElementById("cartao-dados");
+  const campoPagamento = document.getElementById("campo-cartao");
+  if (this.value === "cartao") {
+    campoPagamento.style.display = "block";
+    cartaoDados.style.display = "block";
+  } else {
+    campoPagamento.style.display = "none";
+    cartaoDados.style.display = "none";
+  }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const inputVencimento = document.getElementById("cartao-vencimento");
+
+  inputVencimento.addEventListener("input", function(e){
+    let valor = e.target.value;
+    valor = valor.replace(/\D/g, ""); // remove o que não for número
+
+    // insere a barra
+    if (valor.length > 2) {
+      valor = valor.substring(0, 2) + "/" + valor.substring(2, 4); 
+      // Pega os 2 primeiros, adiciona a barra, e pega os próximos 2 (para o ano)
+    }
+
+    if (valor.length > 5) {
+      valor = valor.substring(0, 5); // Limita o comprimento final para 5 (MM/AA)
+    }
+
+    e.target.value = valor;
+  });
+});
+
+
+
+
 

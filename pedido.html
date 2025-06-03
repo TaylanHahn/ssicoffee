@@ -74,7 +74,7 @@
         <div id="entrega-pagamento" style="display: none;">
             <h2>Entrega e Pagamento</h2>
             <label>
-                <h3>Endereço para entrega:</h3>
+                <h3>Tipo de entrega:</h3>
                 <select id="entrega">
                     <option value="retirada">Retirada na loja</option>
                     <option value="delivery">Delivery</option>
@@ -97,6 +97,24 @@
                     <option value="dinheiro">Dinheiro</option>
                 </select>
             </label>
+
+            <label id="campo-cartao" style="display: none;">
+                <h3>Tipo de pagamento em cartão:</h3>
+                <select>
+                    <option value="selecione">Clique e selecione</option>
+                    <option value="credito">Crédito</option>
+                    <option value="aVista">A Vista</option>
+                </select>
+            </label>
+            <br>
+
+            <label id="cartao-dados" style="display: none;">
+                <input type="text" id="cartao-nome" placeholder="Nome impresso no cartão">
+                <input type="number" id="cartao-numero" placeholder="Digite o número do seu cartão">
+                <input type="number" id="cartao-cvv" placeholder="Número do cvv">
+                <input type="text" id="cartao-vencimento" placeholder="Data de validade (MM/AA)" maxlength="5">
+            </label>
+
             <br>
             <button onclick="finalizar()" class="fim">Comprar!</button>
         </div>

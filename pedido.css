@@ -241,7 +241,8 @@ label h3 {
 }
 
 select#entrega,
-select#pagamento {
+select#pagamento,
+select#campo-cartao {
     width: 50%;
     font-size: 1em;
 }
@@ -256,6 +257,23 @@ input#endereco {
     width: 100%;
     text-align: center;
     font-size: 1em;
+}
+
+#campo-cartao{
+    margin-top: 5%;
+}
+
+#campo-cartao select{
+    width: 50%;
+}
+
+label#cartao-dados{
+    display: flex;
+    flex-direction: column;
+}
+
+#cartao-dados input{
+    width: 70%;
 }
 
 .fim {
