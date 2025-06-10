@@ -228,6 +228,10 @@ p#valor-total {
     background-color: #000000;
 }
 
+.cancelar{
+    margin-top: 5%;
+}
+
 label {
     display: flex;
     flex-direction: column;
@@ -257,6 +261,11 @@ input#endereco {
     width: 100%;
     text-align: center;
     font-size: 1em;
+}
+
+#campo-endereco h5{
+    font-size: 0.9em;
+    font-family: sans-serif;
 }
 
 #campo-cartao{
@@ -305,6 +314,13 @@ a.voltar {
 .voltar:hover {
     color: #000000;
 }
+
+#total-final{
+    margin-top: 10%;
+    font-size: 2em;
+    font-family: sans-serif;
+}
+
 
 /*------------ FOOTER / Contatos ------------*/
 

@@ -85,6 +85,7 @@
             <div id="campo-endereco" style="display: none;">
                 <label>
                     <input type="text" id="endereco" placeholder="Informe seu endereco completo">
+                    <h5>Taxa de entrega - R$ 5,00</h5>
                 </label>
             </div>
             <br>
@@ -115,8 +116,14 @@
                 <input type="text" id="cartao-vencimento" placeholder="Data de validade (MM/AA)" maxlength="5">
             </label>
 
+            <label id="total-final">
+                <p id="valor-total"></p>
+            </label>
+
             <br>
             <button onclick="finalizar()" class="fim">Comprar!</button>
+            <br>
+            <button onclick="editarPedido()" class="cancelar">Cancelar</button></div>
         </div>
 
         <div id="finalizado" style="display: none;">
