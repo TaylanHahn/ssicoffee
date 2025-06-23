@@ -1,0 +1,180 @@
+
+/* tablets e dispositivos menores (até 768px) */
+@media (max-width: 768px) {
+
+    /* --- Cabeçalho --- */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 4%;
+    }
+
+    header nav {
+        text-align: center;
+        margin-top: 15px;
+        z-index: 1;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        font-size: 1.1em;
+    }
+
+    .botaoPedido {
+        width: 50%;
+        margin: 10px auto;
+        padding: 3%;
+        font-size: 1.2em;
+    }
+
+    /* --- Fundo de grãos --- */
+    .graos {
+        height: 50%;
+    }
+
+    /* --- Cards --- */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .card:hover {
+        transform: none;
+        /* Desabilita o zoom no hover em telas de toque */
+    }
+
+    .cardapio {
+        margin: 2em;
+    }
+
+    .cardapio h2 {
+        font-size: 2em;
+    }
+
+    .cardapio h3 {
+        font-size: 1.5em;
+    }
+
+    .cardapio p {
+        font-size: 1em;
+    }
+
+    /* --- Galeria de Imagens do Cardápio --- */
+    .cardapioImg {
+        flex-direction: column;
+        height: auto;
+        margin: 2em 1em;
+    }
+
+    .cardapioImg div {
+        flex-basis: 80px;
+        height: 80px;
+        cursor: pointer;
+        filter: none !important;
+        transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .cardapioImg div.expanded-mobile {
+        flex-basis: 350px;
+        height: 300px;
+    }
+
+    .botaoPedido2 {
+        width: 60%;
+        font-size: 1.2em;
+        padding: 2%;
+    }
+
+    /* --- Seção Quem Somos --- */
+    .quemSomos {
+        margin: 2em;
+    }
+
+    .quemSomos h2 {
+        font-size: 2em;
+    }
+
+    .quemSomos h3 {
+        font-size: 1.5em;
+    }
+
+    .quemSomos p {
+        font-size: 1em;
+    }
+
+    .botaoPedido3 {
+        width: 60%;
+    }
+
+    /* --- Rodapé --- */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 5%;
+    }
+
+    .roadmap {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .roadmap li,
+    .roadmap p,
+    .roadmap h4 {
+        text-align: center;
+    }
+
+    footer img {
+        margin: 20px auto;
+        width: 200px;
+        height: 200px;
+    }
+
+    .mapaFooter {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .mapaFooter iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* celulares menores (até 480px) */
+@media (max-width: 480px) {
+    header img {
+        width: 250px;
+    }
+
+    .botaoPedido {
+        width: 80%;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .cardapio,
+    .quemSomos {
+        margin: 1em;
+    }
+
+    .botaoPedido2,
+    .botaoPedido3 {
+        width: 80%;
+        font-size: 1.1em;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 1.5em;
+    }
+}

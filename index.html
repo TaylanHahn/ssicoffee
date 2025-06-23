@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shoticon icon" href="/archive/logo_principal.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive-style.css">
   <link rel="stylesheet" href="carousel.css">
 
   <!-- ACESSIBILIDADE -->
@@ -37,7 +38,8 @@
 
   <!-- CABEÇALHO-->
   <header>
-    <a href="#quem-somos"><img src="archive/logo_alt1.png" alt="Logo da SSI Coffee Shop" class="header-logo" id="topo"></a>
+    <a href="#quem-somos"><img src="archive/logo_alt1.png" alt="Logo da SSI Coffee Shop" class="header-logo"
+        id="topo"></a>
 
     <nav>
       <a href="pedido.html" class="botaoPedido">Fazer pedido</a>
@@ -116,15 +118,14 @@
 
     <!-- cardápio de cafés -->
     <div class="cardapioImg">
-      <div style="background-image: url(/archive/cardapioCafes/cappuccino.png);"></div>
-      <div style="background-image: url(/archive/cardapioCafes/latte_macchiatto.png);"></div>
-      <div style="background-image: url(/archive/cardapioCafes/expresso.png);"></div>
-      <div style="background-image: url(/archive/cardapioCafes/mocha.png);"></div>
-      <div style="background-image: url(/archive/cardapioCafes/frappe.png);"></div>
+      <div id="cafe-cappuccino"></div>
+      <div id="cafe-latte"></div>
+      <div id="cafe-expresso"></div>
+      <div id="cafe-mocha"></div>
+      <div id="cafe-frappe"></div>
     </div>
 
     <a href="pedido.html" class="botaoPedido2">Fazer pedido</a>
-
     <!-- DOCES & SALGADOS -->
     <section class="cardapio" id="doces-salgados">
       <h2>Doces e Salgados</h2>
@@ -138,16 +139,14 @@
 
     <!-- cardápio de doces e salgados -->
     <div class="cardapioImg">
-      <div style="background-image: url(/archive/cardapioDS/queijudos.png);"></div>
-      <div style="background-image: url(/archive/cardapioDS/croissant.png);"></div>
-      <div style="background-image: url(/archive/cardapioDS/tortas.png);"></div>
-      <div style="background-image: url(/archive/cardapioDS/cookies.png);"></div>
-      <div style="background-image: url(/archive/cardapioDS/sanduiche.png);"></div>
+      <div id="ds-queijudos"></div>
+      <div id="ds-croissant"></div>
+      <div id="ds-tortas"></div>
+      <div id="ds-cookies"></div>
+      <div id="ds-sanduiche"></div>
     </div>
 
-
     <a href="pedido.html" class="botaoPedido2">Fazer pedido</a>
-
 
     <section class="quemSomos" id="quem-somos">
       <h2>Quem somos</h2>
@@ -216,7 +215,7 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 
 </body>
 
