@@ -5,10 +5,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shoticon icon" href="/archive/logo_principal.png">
+  <link rel="shoticon icon" href="/archive/logos/logo_principal.png">
+
+  <!-- LINKS PARA CSS -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive-style.css">
   <link rel="stylesheet" href="carousel.css">
+  <link rel="stylesheet" href="darkmode.css">
+
+  <!-- LINKS PARA JS -->
+  <script src="main.js" defer></script>
+  <script src="darkmode.js" defer></script>
+
+  <!-- LINK PARA O ICONE -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <!-- ACESSIBILIDADE -->
   <script src="https://cdn.userway.org/widget.js" data-account="kCDHqw9ltL"></script>
@@ -38,7 +48,17 @@
 
   <!-- CABEÇALHO-->
   <header>
-    <a href="#quem-somos"><img src="archive/logo_alt1.png" alt="Logo da SSI Coffee Shop" class="header-logo"
+
+    <section class="darkmode">
+      <label>
+        <input id="check" type="checkbox" id="check">
+        <i class="fa-solid fa-sun" id="sun"></i>
+        <i class="fa-solid fa-moon" id="moon"></i>
+        <span class="toggle"></span>
+      </label>
+    </section>
+
+    <a href="#quem-somos"><img src="archive/logos/logo_alt1.png" alt="Logo da SSI Coffee Shop" class="header-logo"
         id="topo"></a>
 
     <nav>
@@ -47,7 +67,9 @@
       <a href="#doces-salgados">Doces & Salgados</a>
       <a href="#quem-somos">Quem somos</a>
       <a href="#contato">Contato</a>
+      <section class="darkmode">
     </nav>
+
   </header>
 
   <!-- background dos grãos-->
@@ -61,19 +83,19 @@
         <!-- View 1: Arte da Cafeteria -->
         <div class="carBanner">
           <a href="#cafes">
-            <img src="/archive/1.png" alt="Arte da Cafeteria" />
+            <img src="/archive/logos/1.png" alt="Arte da Cafeteria">
           </a>
         </div>
         <!-- View 2: Vídeo para o YouTube -->
         <div class="carBanner">
           <a href="https://youtu.be/wXpdFNe4Ejw?si=VYrFKCUH7gCbH2-R" target="_blank">
-            <img src="/archive/2.png" alt="Vídeo do YouTube" />
+            <img src="/archive/logos/2.png" alt="Vídeo do YouTube">
           </a>
         </div>
         <!-- View 3: Foto com chamada -->
         <div class="carBanner">
           <a href="#doces-salgados">
-            <img src="/archive/3.png" alt="Produto para compra" />
+            <img src="/archive/logos/3.png" alt="Produto para compra">
           </a>
         </div>
       </div>
@@ -85,21 +107,21 @@
     <!-- CARDS -->
     <section class="cards">
       <section class="card">
-        <img src="/archive/card2.png" alt="">
+        <img src="/archive/logos/card2.png" alt="">
         <h2>Para toda hora</h2>
         <p>Café é sempre uma boa ideia né. Que tal uma xícara de café agora?</p>
         <a href="pedido.html"><button class="card-button">Eu quero!</button></a>
       </section>
 
       <section class="card">
-        <img src="/archive/card1.png" alt="">
+        <img src="/archive/logos/card1.png" alt="">
         <h2>Take-away</h2>
         <p>Praticidade no dia a dia. Seu café favorito, te acompanhando onde for.</p>.
         <a href="pedido.html"><button class="card-button">Peça o seu!</button></a>
       </section>
 
       <section class="card">
-        <img src="/archive/card3.png" alt="">
+        <img src="/archive/logos/card3.png" alt="">
         <h2>O pedido ideal</h2>
         <p>Café bom, é café acompanahdo. Os melhores salgados e doces pra você.</p>
         <a href="#doces-salgados"><button class="card-button">Confira!</button></a>
@@ -157,7 +179,7 @@
         principal do IFRS, a cafeteria está agora em uma sede própria, ao lado do instituto, no antigo edifício da
         Mesbla Veículos — totalmente revitalizado e transformado em um espaço pensado para quem respira código e café.
       </p>
-      <img src="/archive/sedeCafeteria.png" alt="Foto da SSI Cafeteria">
+      <img src="/archive/logos/sedeCafeteria.png" alt="Foto da SSI Cafeteria">
       <br>
       <p>O nome "SSI" homenageia a área de Sistemas para Internet, um dos pilares do ensino técnico e superior do
         campus, e representa a união entre a paixão por tecnologia e o prazer de uma boa xícara de café. Mais do que uma
@@ -183,7 +205,7 @@
     </section>
   </main>
 
-  <a href="#topo" class="botaoPedido3" style="scroll-behavior: smooth;">Voltar para o topo</a>
+  <a href="#topo" class="voltarTopo" style="scroll-behavior: smooth;">Voltar para o topo</a>
 
   <footer id="contato">
     <!-- roadmap do site -->
@@ -204,7 +226,7 @@
 
     </div>
 
-    <img src="/archive/logo_branca.png" alt="">
+    <img src="/archive/logos/logo_branca.png" alt="">
 
     <div class="mapaFooter">
       <h4>Nos localize no mapa abaixo:</h4>
@@ -214,9 +236,6 @@
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </footer>
-
-  <script src="main.js" defer></script>
-
 </body>
 
 </html>

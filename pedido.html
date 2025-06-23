@@ -4,10 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shoticon icon" href="/archive/logo_principal.png">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="shoticon icon" href="/archive/logos/logo_principal.png">
+
+    <!-- LINKS PARA CSS -->
     <link rel="stylesheet" href="pedido.css">
     <link rel="stylesheet" href="responsive-pedido.css">
+    <link rel="stylesheet" href="darkmode-pedido.css">
+
+    <!-- LINKS PARA JS -->
+    <script src="pedido.js" defer></script>
+    <script src="darkmode.js" defer></script>
+
+    <!-- LINK PARA O ICONE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- ACESSIBILIDADE -->
     <script src="https://cdn.userway.org/widget.js" data-account="kCDHqw9ltL"></script>
@@ -36,7 +45,12 @@
 <body>
     <!-- CABEÇALHO-->
     <header>
-        <a href="index.html"><img src="archive/logo_alt1.png" alt="Logo da SSI Coffee Shop" class="header-logo"></a>
+
+        <section class="darkmode" id="check" type="checkbox" class="toggle">
+        </section>
+
+        <a href="index.html"><img src="archive/logos/logo_alt1.png" alt="Logo da SSI Coffee Shop"
+                class="header-logo"></a>
         <nav>
             <a href="index.html#cafes">Cafés</a>
             <a href="index.html#doces-salgados">Doces & Salgados</a>
@@ -94,9 +108,9 @@
             <label>
                 <h3>Forma de pagamento:</h3>
                 <select id="pagamento">
+                    <option value="dinheiro">Dinheiro</option>
                     <option value="pix">Pix</option>
                     <option value="cartao">Cartão</option>
-                    <option value="dinheiro">Dinheiro</option>
                 </select>
             </label>
 
@@ -117,6 +131,11 @@
                 <input type="text" id="cartao-vencimento" placeholder="Data de validade (MM/AA)" maxlength="5">
             </label>
 
+            <div id="pix-qrcode-container" style="display: none; text-align: center; margin-top: 20px;">
+                <h3>Escaneie o QR Code para pagar com PIX:</h3>
+                <img src="/archive/logos/qrcode.png" alt="QR Code PIX" style="width: 200px; height: auto; border: 1px solid #ccc; padding: 10px;">
+            </div>
+
             <label id="total-final">
                 <p id="valor-total"></p>
             </label>
@@ -124,7 +143,8 @@
             <br>
             <button onclick="finalizar()" class="fim">Comprar!</button>
             <br>
-            <button onclick="editarPedido()" class="cancelar">Cancelar</button></div>
+            <button onclick="editarPedido()" class="cancelar">Cancelar</button>
+        </div>
         </div>
 
         <div id="finalizado" style="display: none;">
@@ -152,7 +172,7 @@
             <p>E-mail: contato@ssicafeteria.com.br</p>
         </div>
 
-        <img src="/archive/logo_branca.png" alt="">
+        <img src="/archive/logos/logo_branca.png" alt="">
 
         <div class="mapaFooter">
             <h4>Nos localize no mapa abaixo:</h4>
@@ -162,8 +182,6 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
-
-    <script src="pedido.js"></script>
 </body>
 
 </html>

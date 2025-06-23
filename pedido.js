@@ -6,7 +6,7 @@ const cardapio = {
   "Expresso - R$ 6,00": 6,
   "Mocha - R$ 14,00": 14,
   "Frappé - R$ 16,00": 16,
-  "Separator1": "", // Use distinct keys for separators
+  "Separator1": "",
   ">>> DOCES & SALGADOS": "",
   "Pão de Queijo (5 un.) - R$ 5,00": 5,
   "Croissant - R$ 8,00": 8,
@@ -15,7 +15,7 @@ const cardapio = {
   "Torta de chocolate (fatia) - R$ 10,00": 10,
   "Torta de baunilha (fatia) - R$ 10,00": 10,
   "Torta de morango (fatia) - R$ 10,00": 10,
-  "Separator2": "", // Use distinct keys for separators
+  "Separator2": "",
 };
 
 // Array que irá guardar o pedido do cliente
@@ -66,12 +66,11 @@ function mostrarResumo() {
   let validItemsCount = 0;
 
   itens.forEach(div => {
-    const itemText = div.querySelector("select").value; // Get the full text, e.g., "Cappuccino - R$ 7,50"
+    const itemText = div.querySelector("select").value;
     const qtd = parseInt(div.querySelector("input").value);
 
-    const itemPrice = cardapio[itemText]; // Look up price using the full text
+    const itemPrice = cardapio[itemText];
 
-    // Validate that the item selected is a valid product with a price (number)
     if (typeof itemPrice === 'number' && !isNaN(itemPrice) && itemPrice > 0) {
       const preco = itemPrice * qtd;
       itensAdicionados.push({ item: itemText, qtd, preco });
@@ -100,10 +99,10 @@ function mostrarResumo() {
 // Função para editar o pedido. O cliente pode voltar a tela de pedido e assim, usar a função para remover os produtos do pedido.
 function editarPedido() {
   document.getElementById("resumo-pedido").style.display = "none";
-  document.getElementById("entrega-pagamento").style.display = "none"; // Hide delivery/payment section
+  document.getElementById("entrega-pagamento").style.display = "none";
   document.getElementById("pedido-form").style.display = "block";
   document.querySelector("h1").style.display = "block";
-  document.querySelector("p").style.display = "block"; // Torna o parágrafo visível novamente
+  document.querySelector("p").style.display = "block";
 }
 
 function mostrarEntrega() {
@@ -117,7 +116,7 @@ function finalizar() {
   const formaPagamento = document.getElementById("pagamento").value;
   let isValid = true;
 
-  // Validate delivery address if delivery is selected
+
   if (formaEntrega === "delivery") {
     const endereco = document.getElementById("endereco").value.trim();
     if (endereco === "") {
@@ -126,7 +125,6 @@ function finalizar() {
     }
   }
 
-  // Validate credit card details if card payment is selected
   if (formaPagamento === "cartao" && isValid) {
     const cartaoNome = document.getElementById("cartao-nome").value.trim();
     const cartaoNumero = document.getElementById("cartao-numero").value.trim();
@@ -136,22 +134,23 @@ function finalizar() {
 
 
     if (tipoCartao === "selecione") {
-        alert("Por favor, selecione o tipo de pagamento em cartão.");
-        isValid = false;
+      alert("Por favor, selecione o tipo de pagamento em cartão.");
+      isValid = false;
     } else if (cartaoNome === "" || cartaoNumero === "" || cartaoCvv === "" || cartaoVencimento === "") {
       alert("Por favor, preencha todos os dados do cartão.");
       isValid = false;
-    } else if (cartaoNumero.length < 16) { // Basic check for card number length
-        alert("O número do cartão deve ter 16 dígitos.");
-        isValid = false;
-    } else if (cartaoCvv.length < 3 || cartaoCvv.length > 4) { // Basic check for CVV length
-        alert("O CVV deve ter 3 ou 4 dígitos.");
-        isValid = false;
-    } else if (!/^(0[1-9]|1[0-2])\/?([0-9]{2})$/.test(cartaoVencimento)) { // MM/YY format
-        alert("Formato de data de validade inválido. Use MM/AA.");
-        isValid = false;
+    } else if (cartaoNumero.length < 16) {
+      alert("O número do cartão deve ter 16 dígitos.");
+      isValid = false;
+    } else if (cartaoCvv.length < 3 || cartaoCvv.length > 4) {
+      alert("O CVV deve ter 3 ou 4 dígitos.");
+      isValid = false;
+    } else if (!/^(0[1-9]|1[0-2])\/?([0-9]{2})$/.test(cartaoVencimento)) {
+      alert("Formato de data de validade inválido. Use MM/AA.");
+      isValid = false;
     }
   }
+
 
   if (isValid) {
     console.log("Entrega:", formaEntrega);
@@ -166,18 +165,16 @@ document.getElementById("entrega").addEventListener("change", function () {
   const campoEndereco = document.getElementById("campo-endereco");
   if (this.value === "delivery") {
     campoEndereco.style.display = "block";
-    // Add delivery fee to total if not already included
     if (totalAtual > 0 && !itensAdicionados.some(item => item.item === "Taxa de Entrega")) {
-      totalAtual += 5.00; // Add R$ 5,00 delivery fee
+      totalAtual += 5.00;
       document.getElementById("total-final").textContent = `TOTAL: R$ ${totalAtual.toFixed(2)}`;
       itensAdicionados.push({ item: "Taxa de Entrega", qtd: 1, preco: 5.00 });
     }
   } else {
     campoEndereco.style.display = "none";
-    // Remove delivery fee from total if delivery is deselected and fee was added
     const deliveryFeeIndex = itensAdicionados.findIndex(item => item.item === "Taxa de Entrega");
     if (deliveryFeeIndex !== -1) {
-      totalAtual -= 5.00; // Remove R$ 5,00 delivery fee
+      totalAtual -= 5.00;
       document.getElementById("total-final").textContent = `TOTAL: R$ ${totalAtual.toFixed(2)}`;
       itensAdicionados.splice(deliveryFeeIndex, 1);
     }
@@ -187,19 +184,27 @@ document.getElementById("entrega").addEventListener("change", function () {
 document.getElementById("pagamento").addEventListener("change", function () {
   const cartaoDados = document.getElementById("cartao-dados");
   const campoPagamento = document.getElementById("campo-cartao");
+  const pixQrcodeContainer = document.getElementById("pix-qrcode-container"); // NOVA LINHA: Seleciona o container do QR Code
+
+  // Oculta todos os campos de pagamento por padrão
+  campoPagamento.style.display = "none";
+  cartaoDados.style.display = "none";
+  pixQrcodeContainer.style.display = "none"; // NOVA LINHA: Oculta o QR Code por padrão
+
+  // Mostra os campos relevantes com base na seleção
   if (this.value === "cartao") {
     campoPagamento.style.display = "block";
     cartaoDados.style.display = "block";
-  } else {
-    campoPagamento.style.display = "none";
-    cartaoDados.style.display = "none";
+  } else if (this.value === "pix") { // NOVA CONDIÇÃO: Para o PIX
+    pixQrcodeContainer.style.display = "block";
   }
+  // Se for "dinheiro" ou "selecione", todos os campos permanecerão ocultos, o que é o comportamento desejado.
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const inputVencimento = document.getElementById("cartao-vencimento");
 
-  inputVencimento.addEventListener("input", function(e){
+  inputVencimento.addEventListener("input", function (e) {
     let valor = e.target.value;
     valor = valor.replace(/\D/g, ""); // remove o que não for número
 

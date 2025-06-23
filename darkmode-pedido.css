@@ -1,0 +1,183 @@
+/* FORMATAÇÃO BOTAO DARKMODE */
+
+
+/* Formatação da página */
+
+body.darkmode {
+    background: #171516;
+}
+
+.darkmode header {
+    background-color: #000000b2;
+}
+
+.darkmode a:hover{
+    color: #EDEBD7;
+}
+
+.darkmode h2{
+    color: #9b4415;
+}
+
+.darkmode h3 {
+    color: #D9B084;
+}
+
+
+.darkmode p {
+    color: #FFFFFF;
+}
+
+
+.darkmode #cafe-cappuccino { background-image: url(/archive/dark-images/cappuccino-dark.png); }
+.darkmode #cafe-latte { background-image: url(/archive/dark-images/latte-dark.png); }
+.darkmode #cafe-expresso { background-image: url(/archive/dark-images/expresso-dark.png); }
+.darkmode #cafe-mocha { background-image: url(/archive/dark-images/mocha-dark.png); }
+.darkmode #cafe-frappe { background-image: url(/archive/dark-images/frappe-dark.png); }
+
+.darkmode #ds-queijudos { background-image: url(/archive/dark-images/queijudos-dark.png); }
+.darkmode #ds-croissant { background-image: url(/archive/dark-images/croissant-dark.png); }
+.darkmode #ds-tortas { background-image: url(/archive/dark-images/tortas-dark.png); }
+.darkmode #ds-cookies { background-image: url(/archive/dark-images/cookies-dark.png); }
+.darkmode #ds-sanduiche { background-image: url(/archive/dark-images/sanduiche-dark.png); }
+
+
+/*Botão pedido*/
+
+.darkmode .botaoPedido:hover{
+    background-color: #D9B084;
+    color: #000000;
+}
+
+.darkmode .botaoPedido2:hover{
+    background-color: #D9B084;
+    color: #000000;
+}
+
+/* Formatação da página */
+
+.darkmode h1, h2 {
+    color: #9b4415;
+}
+
+.darkmode p {
+    color: #D9B084;
+}
+
+.darkmode h5 {
+    color: #FFFFFF;
+}
+
+.darkmode p#valor-total {
+    color: #FFFFFF;
+}
+
+.darkmode .finalizar:hover {
+    background-color: #000000;
+}
+
+.darkmode .cancelar{
+    margin-top: 5%;
+}
+
+.darkmode .addItem:hover {
+    background-color: #EDEBD7;
+    color: #000000;
+}
+
+.darkmode .concluir:hover {
+    background-color: #EDEBD7;
+    color: #000000;
+}
+
+.darkmode li {
+    color: #D9B084;
+}
+
+.darkmode .finalizar:hover {
+    background-color: #EDEBD7;
+    color: #000000;
+}
+
+.darkmode .fim:hover {
+    background-color: #EDEBD7;
+    color: #000000;
+}
+
+
+.darkmode #finalizado p {
+    color: #D9B084;
+    font-size: 2em;
+}
+
+.darkmode a.voltar {
+    color: #9b4415;
+}
+
+.darkmode .voltar:hover {
+    color: #9b4415;
+}
+
+.darkmode #total-final{
+    color: #D9B084;
+}
+
+
+body.darkmode #pix-qrcode-container h3,
+body.darkmode #pix-qrcode-container p {
+    color: #FEFEFE; 
+}
+body.darkmode #pix-qrcode-container img {
+    border-color: #9b4415;
+    background-color: #FFFFFF;
+}
+
+
+/* FOOTER */
+
+.darkmode footer {
+    background-color: #000000b2;
+}
+
+.darkmode footer h4 {
+    color: #9b4415;
+}
+
+
+
+
+
+/* -----icones----- */
+#sun {
+    position: absolute;
+    font-size: 2em;
+    color: orange;
+    transform: scale(0);
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#sun {
+    transition-delay: .8s;
+    transform: scale(1) rotate(360deg);
+}
+
+#moon {
+    font-size: 2em;
+    color: #666;
+    transition: 1s ease;
+}
+
+.darkmode input:checked~#moon {
+    transition-delay: 0s;
+    transform: rotate(360deg) scale(0);
+}
+
+.toggle {
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
