@@ -73,7 +73,7 @@
     }
 
     .cardapioImg div {
-        flex-basis: 80px;
+        flex-basis: 100px;
         height: 80px;
         cursor: pointer;
         filter: none !important;
@@ -81,7 +81,7 @@
     }
 
     .cardapioImg div.expanded-mobile {
-        flex-basis: 350px;
+        flex-basis: 380px;
         height: 300px;
     }
 
