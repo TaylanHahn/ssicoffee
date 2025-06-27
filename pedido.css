@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: ssi;
-    src: url(/fonts/narniaBLL.ttf);
+    src: url(./fonts/narniaBLL.ttf);
 }
 
 * {
@@ -76,7 +76,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 40%;
-    background-image: url(/archive/logos/graoscafe.png);
+    background-image: url(./archive/logos/graoscafe.png);
     background-size: cover;
     background-position: center;
     z-index: -2;

@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Atualiza o background dos grãos
     if (graosBackground) {
       if (isDarkMode) {
-        graosBackground.style.backgroundImage = 'url("/archive/dark-images/graos_dark.png")';
+        graosBackground.style.backgroundImage = 'url("./archive/dark-images/graos_dark.png")';
       } else {
-        graosBackground.style.backgroundImage = 'url("/archive/logos/graoscafe.png")';
+        graosBackground.style.backgroundImage = 'url("./archive/logos/graoscafe.png")';
       }
     }
 
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
       // Se o logo é uma tag <img>
       if (logoHeader.tagName === 'IMG') {
         if (isDarkMode) {
-          logoHeader.setAttribute('src', '/archive/dark-images/logo_alt2.png');
+          logoHeader.setAttribute('src', './archive/dark-images/logo_alt2.png');
         } else {
-          logoHeader.setAttribute('src', '/archive/logos/logo_alt1.png');
+          logoHeader.setAttribute('src', './archive/logos/logo_alt1.png');
         }
       }
     }

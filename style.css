@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: ssi;
-    src: url(/fonts/narniaBLL.ttf);
+    src: url(./fonts/narniaBLL.ttf);
 }
 
 * {
@@ -73,7 +73,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 80%;
-    background-image: url(/archive/logos/graoscafe.png);
+    background-image: url(./archive/logos/graoscafe.png);
     background-size: cover;
     background-position: center;
     z-index: -2;
@@ -184,17 +184,17 @@ nav a:hover {
 }
 
 /* --- Caminhos das Imagens do Cardápio (assumindo que estão na pasta /archive/) --- */
-#cafe-cappuccino { background-image: url(/archive/cardapioCafes/cappuccino.png); }
-#cafe-latte { background-image: url(/archive/cardapioCafes/latte_macchiatto.png); }
-#cafe-expresso { background-image: url(/archive/cardapioCafes/expresso.png); }
-#cafe-mocha { background-image: url(/archive/cardapioCafes/mocha.png); }
-#cafe-frappe { background-image: url(/archive/cardapioCafes/frappe.png); }
+#cafe-cappuccino { background-image: url(./archive/cardapioCafes/cappuccino.png); }
+#cafe-latte { background-image: url(./archive/cardapioCafes/latte_macchiatto.png); }
+#cafe-expresso { background-image: url(./archive/cardapioCafes/expresso.png); }
+#cafe-mocha { background-image: url(./archive/cardapioCafes/mocha.png); }
+#cafe-frappe { background-image: url(./archive/cardapioCafes/frappe.png); }
 
-#ds-queijudos { background-image: url(/archive/cardapioDS/queijudos.png); }
-#ds-croissant { background-image: url(/archive/cardapioDS/croissant.png); }
-#ds-tortas { background-image: url(/archive/cardapioDS/tortas.png); }
-#ds-cookies { background-image: url(/archive/cardapioDS/cookies.png); }
-#ds-sanduiche { background-image: url(/archive/cardapioDS/sanduiche.png); }
+#ds-queijudos { background-image: url(./archive/cardapioDS/queijudos.png); }
+#ds-croissant { background-image: url(./archive/cardapioDS/croissant.png); }
+#ds-tortas { background-image: url(./archive/cardapioDS/tortas.png); }
+#ds-cookies { background-image: url(./archive/cardapioDS/cookies.png); }
+#ds-sanduiche { background-image: url(./archive/cardapioDS/sanduiche.png); }
 
 /* Efeito de hover apenas para telas de desktop */
 @media (min-width: 769px) {

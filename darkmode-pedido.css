@@ -29,17 +29,17 @@ body.darkmode {
 }
 
 
-.darkmode #cafe-cappuccino { background-image: url(/archive/dark-images/cappuccino-dark.png); }
-.darkmode #cafe-latte { background-image: url(/archive/dark-images/latte-dark.png); }
-.darkmode #cafe-expresso { background-image: url(/archive/dark-images/expresso-dark.png); }
-.darkmode #cafe-mocha { background-image: url(/archive/dark-images/mocha-dark.png); }
-.darkmode #cafe-frappe { background-image: url(/archive/dark-images/frappe-dark.png); }
+.darkmode #cafe-cappuccino { background-image: url(./archive/dark-images/cappuccino-dark.png); }
+.darkmode #cafe-latte { background-image: url(./archive/dark-images/latte-dark.png); }
+.darkmode #cafe-expresso { background-image: url(./archive/dark-images/expresso-dark.png); }
+.darkmode #cafe-mocha { background-image: url(./archive/dark-images/mocha-dark.png); }
+.darkmode #cafe-frappe { background-image: url(./archive/dark-images/frappe-dark.png); }
 
-.darkmode #ds-queijudos { background-image: url(/archive/dark-images/queijudos-dark.png); }
-.darkmode #ds-croissant { background-image: url(/archive/dark-images/croissant-dark.png); }
-.darkmode #ds-tortas { background-image: url(/archive/dark-images/tortas-dark.png); }
-.darkmode #ds-cookies { background-image: url(/archive/dark-images/cookies-dark.png); }
-.darkmode #ds-sanduiche { background-image: url(/archive/dark-images/sanduiche-dark.png); }
+.darkmode #ds-queijudos { background-image: url(./archive/dark-images/queijudos-dark.png); }
+.darkmode #ds-croissant { background-image: url(./archive/dark-images/croissant-dark.png); }
+.darkmode #ds-tortas { background-image: url(./archive/dark-images/tortas-dark.png); }
+.darkmode #ds-cookies { background-image: url(./archive/dark-images/cookies-dark.png); }
+.darkmode #ds-sanduiche { background-image: url(./archive/dark-images/sanduiche-dark.png); }
 
 
 /*Botão pedido*/

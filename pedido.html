@@ -2,54 +2,34 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shoticon icon" href="/archive/logos/logo_principal.png">
+    <link rel="shoticon icon" href="./archive/logos/logo_principal.png">
 
-    <!-- LINKS PARA CSS -->
     <link rel="stylesheet" href="pedido.css">
     <link rel="stylesheet" href="responsive-pedido.css">
     <link rel="stylesheet" href="darkmode-pedido.css">
 
-    <!-- LINKS PARA JS -->
     <script src="pedido.js" defer></script>
     <script src="darkmode.js" defer></script>
-
-    <!-- LINK PARA O ICONE -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- ACESSIBILIDADE -->
-    <script src="https://cdn.userway.org/widget.js" data-account="kCDHqw9ltL"></script>
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-
-    <!-- LIBRAS -->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
+        window.addEventListener('DOMContentLoaded', (event) => {
+            document.body.style.zoom = "90%";
+        });
     </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <title>Pedido | SSI Cafeteria</title>
 </head>
 
 <body>
-    <!-- CABEÇALHO-->
     <header>
 
-        <section class="darkmode" id="check" type="checkbox" class="toggle">
-        </section>
+        <div class="darkmode toggle" id="check">
+        </div>
 
-        <a href="index.html"><img src="archive/logos/logo_alt1.png" alt="Logo da SSI Coffee Shop"
+        <a href="index.html"><img src="./archive/logos/logo_alt1.png" alt="Logo da SSI Coffee Shop"
                 class="header-logo"></a>
         <nav>
             <a href="index.html#cafes">Cafés</a>
@@ -59,7 +39,6 @@
         </nav>
     </header>
 
-    <!-- background dos grãos-->
     <div class="graos"></div>
 
     <section class="formPedido">
@@ -88,8 +67,9 @@
 
         <div id="entrega-pagamento" style="display: none;">
             <h2>Entrega e Pagamento</h2>
-            <label>
-                <h3>Tipo de entrega:</h3>
+            
+            <h3>Tipo de entrega:</h3>
+            <label for="entrega">
                 <select id="entrega">
                     <option value="retirada">Retirada na loja</option>
                     <option value="delivery">Delivery</option>
@@ -98,15 +78,15 @@
             <br>
 
             <div id="campo-endereco" style="display: none;">
-                <label>
+                <label for="endereco">Informe seu endereço completo
                     <input type="text" id="endereco" placeholder="Informe seu endereco completo">
-                    <h5>Taxa de entrega - R$ 5,00</h5>
                 </label>
+                <h5>Taxa de entrega - R$ 5,00</h5>
             </div>
             <br>
 
-            <label>
-                <h3>Forma de pagamento:</h3>
+            <h3>Forma de pagamento:</h3>
+            <label for="pagamento">
                 <select id="pagamento">
                     <option value="dinheiro">Dinheiro</option>
                     <option value="pix">Pix</option>
@@ -114,37 +94,50 @@
                 </select>
             </label>
 
-            <label id="campo-cartao" style="display: none;">
+            <div id="campo-cartao" style="display: none;">
                 <h3>Tipo de pagamento em cartão:</h3>
-                <select>
-                    <option value="selecione">Clique e selecione</option>
-                    <option value="credito">Crédito</option>
-                    <option value="aVista">Débito</option>
-                </select>
-            </label>
+                <label for="tipo-cartao">
+                    <select id="tipo-cartao">
+                        <option value="selecione">Clique e selecione</option>
+                        <option value="credito">Crédito</option>
+                        <option value="aVista">Débito</option>
+                    </select>
+                </label>
+            </div>
             <br>
 
-            <label id="cartao-dados" style="display: none;">
-                <input type="text" id="cartao-nome" placeholder="Nome impresso no cartão">
-                <input type="number" id="cartao-numero" placeholder="Digite o número do seu cartão">
-                <input type="number" id="cartao-cvv" placeholder="Número do cvv">
-                <input type="text" id="cartao-vencimento" placeholder="Data de validade (MM/AA)" maxlength="5">
-            </label>
+            <div id="cartao-dados" style="display: none;">
+                <label>
+                    Nome impresso no cartão
+                    <input type="text" id="cartao-nome" placeholder="Nome impresso no cartão">
+                </label>
+                <label>
+                    Número do seu cartão
+                    <input type="number" id="cartao-numero" placeholder="Digite o número do seu cartão">
+                </label>
+                <label>
+                    Número do cvv
+                    <input type="number" id="cartao-cvv" placeholder="Número do cvv">
+                </label>
+                <label>
+                    Data de validade (MM/AA)
+                    <input type="text" id="cartao-vencimento" placeholder="Data de validade (MM/AA)" maxlength="5">
+                </label>
+            </div>
 
             <div id="pix-qrcode-container" style="display: none; text-align: center; margin-top: 20px;">
                 <h3>Escaneie o QR Code para pagar com PIX:</h3>
-                <img src="/archive/logos/qrcode.png" alt="QR Code PIX" style="width: 200px; height: auto; border: 1px solid #ccc; padding: 10px;">
+                <img src="./archive/logos/qrcode.png" alt="QR Code PIX" style="width: 200px; height: auto; border: 1px solid #ccc; padding: 10px;">
             </div>
 
-            <label id="total-final">
-                <p id="valor-total"></p>
-            </label>
+            <div id="total-final">
+                <p></p>
+            </div>
 
             <br>
             <button onclick="finalizar()" class="fim">Comprar!</button>
             <br>
             <button onclick="editarPedido()" class="cancelar">Cancelar</button>
-        </div>
         </div>
 
         <div id="finalizado" style="display: none;">
@@ -155,7 +148,6 @@
     </section>
 
     <footer id="contato">
-        <!-- roadmap do site -->
         <div class="roadmap">
             <h4>Navegue pelo site</h4>
             <ul>
@@ -172,7 +164,7 @@
             <p>E-mail: contato@ssicafeteria.com.br</p>
         </div>
 
-        <img src="/archive/logos/logo_branca.png" alt="">
+        <img src="./archive/logos/logo_branca.png" alt="Logo da cafeteria em cor branca">
 
         <div class="mapaFooter">
             <h4>Nos localize no mapa abaixo:</h4>
@@ -182,6 +174,25 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
+
+    <script src="https://cdn.userway.org/widget.js" data-account="kCDHqw9ltL"></script>
+    <div class="enabled">
+        <div class="active"></div>
+        <div>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>

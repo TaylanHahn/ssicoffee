@@ -1,241 +1,238 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shoticon icon" href="/archive/logos/logo_principal.png">
-
-  <!-- LINKS PARA CSS -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsive-style.css">
-  <link rel="stylesheet" href="carousel.css">
-  <link rel="stylesheet" href="darkmode.css">
-
-  <!-- LINKS PARA JS -->
-  <script src="main.js" defer></script>
-  <script src="darkmode.js" defer></script>
-
-  <!-- LINK PARA O ICONE -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <!-- ACESSIBILIDADE -->
-  <script src="https://cdn.userway.org/widget.js" data-account="kCDHqw9ltL"></script>
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-
-  <!-- LIBRAS -->
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-
-  <title>SSI Cafeteria</title>
+        <meta charset="utf-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link href="./archive/logos/logo_principal.png" rel="shoticon icon">
+        <!-- LINKS PARA CSS -->
+        <link href="style.css" rel="stylesheet">
+        <link href="responsive-style.css" rel="stylesheet">
+        <link href="carousel.css" rel="stylesheet">
+        <link href="darkmode.css" rel="stylesheet">
+        <!-- LINKS PARA JS -->
+        <script defer="" src="main.js"></script>
+        <script defer="" src="darkmode.js"></script>
+        <script>
+                window.addEventListener('DOMContentLoaded', (event) => {
+                        document.body.style.zoom = "90%";
+                });
+        </script>
+        <!-- LINK PARA O ICONE -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+        <title>SSI Cafeteria</title>
 </head>
 
 <body>
-
-  <!-- CABEÇALHO-->
-  <header>
-
-    <section class="darkmode">
-      <label>
-        <input id="check" type="checkbox" id="check">
-        <i class="fa-solid fa-sun" id="sun"></i>
-        <i class="fa-solid fa-moon" id="moon"></i>
-        <span class="toggle"></span>
-      </label>
-    </section>
-
-    <a href="#quem-somos"><img src="archive/logos/logo_alt1.png" alt="Logo da SSI Coffee Shop" class="header-logo"
-        id="topo"></a>
-
-    <nav>
-      <a href="pedido.html" class="botaoPedido">Fazer pedido</a>
-      <a href="#cafes">Cafés</a>
-      <a href="#doces-salgados">Doces & Salgados</a>
-      <a href="#quem-somos">Quem somos</a>
-      <a href="#contato">Contato</a>
-      <section class="darkmode">
-    </nav>
-
-  </header>
-
-  <!-- background dos grãos-->
-  <div class="graos"></div>
-
-  <main>
-
-    <!-- CAROUSEL -->
-    <div id="carousel">
-      <div class="carInner">
-        <!-- View 1: Arte da Cafeteria -->
-        <div class="carBanner">
-          <a href="#cafes">
-            <img src="/archive/logos/1.png" alt="Arte da Cafeteria">
-          </a>
+        <!-- CABEÇALHO-->
+        <header>
+                <div class="darkmode">
+                        <label>
+                                <input id="check" type="checkbox">
+                                <i class="fa-solid fa-sun" id="sun"></i>
+                                <i class="fa-solid fa-moon" id="moon"></i>
+                                <span class="toggle"></span>
+                        </label>
+                </div>
+                <a href="#quem-somos"><img alt="Logo da SSI Coffee Shop" class="header-logo" id="topo"
+                                src="./archive/logos/logo_alt1.png"></a>
+                <nav>
+                        <a class="botaoPedido" href="pedido.html">Fazer pedido</a>
+                        <a href="#cafes">Cafés</a>
+                        <a href="#doces-salgados">Doces &amp; Salgados</a>
+                        <a href="#quem-somos">Quem somos</a>
+                        <a href="#contato">Contato</a>
+                </nav>
+                <div class="darkmode">
+                </div>
+        </header>
+        <!-- background dos grãos-->
+        <div class="graos"></div>
+        <main>
+                <!-- CAROUSEL -->
+                <div id="carousel">
+                        <div class="carInner">
+                                <!-- View 1: Arte da Cafeteria -->
+                                <div class="carBanner">
+                                        <a href="#cafes">
+                                                <img alt="Arte da Cafeteria" src="./archive/logos/1.png">
+                                        </a>
+                                </div>
+                                <!-- View 2: Vídeo para o YouTube -->
+                                <div class="carBanner">
+                                        <a href="https://youtu.be/wXpdFNe4Ejw?si=VYrFKCUH7gCbH2-R" target="_blank">
+                                                <img alt="Vídeo do YouTube" src="./archive/logos/2.png">
+                                        </a>
+                                </div>
+                                <!-- View 3: Foto com chamada -->
+                                <div class="carBanner">
+                                        <a href="#doces-salgados">
+                                                <img alt="Produto para compra" src="./archive/logos/3.png">
+                                        </a>
+                                </div>
+                        </div>
+                        <button class="prev-btn">❮</button>
+                        <button class="next-btn">❯</button>
+                </div>
+                <!-- CARDS -->
+                <section class="cards">
+                        <section class="card">
+                                <img alt="Imagem do card, com uma xícara de café no centro."
+                                        src="./archive/logos/card2.png">
+                                <h2>Para toda hora</h2>
+                                <p>Café é sempre uma boa ideia né. Que tal uma xícara de café agora?</p>
+                                <button class="card-button" onclick="location.href='pedido.html'">Eu quero!</button>
+                        </section>
+                        <section class="card">
+                                <img alt="Imagem do card, com dois copos de café no centro."
+                                        src="./archive/logos/card1.png">
+                                <h2>Take-away</h2>
+                                <p>Praticidade no dia a dia. Seu café favorito, te acompanhando onde for.</p>.
+                                <button class="card-button" onclick="location.href='pedido.html'">Peça o seu!</button>
+                        </section>
+                        <section class="card">
+                                <img alt="Imagem do card, com um croissant no centro." src="./archive/logos/card3.png">
+                                <h2>O pedido ideal</h2>
+                                <p>Café bom, é café acompanahdo. Os melhores salgados e doces pra você.</p>
+                                <button class="card-button" onclick="location.href='#doces-salgados'">Confira!</button>
+                        </section>
+                </section>
+                <!-- CAFÉS -->
+                <section class="cardapio" id="cafes">
+                        <h2>Cafés</h2>
+                        <h3>A experiência perfeita começa aqui.</h3>
+                        <p>Na SSI Cafeteria, cada xícara é um convite para descobrir o verdadeiro sabor do café.
+                                Selecionamos os
+                                grãos mais finos, cultivados com paixão e torrados com precisão, garantindo um
+                                equilíbrio impecável
+                                entre aroma, textura e sabor. Aqui, o café é mais do que uma bebida: é uma arte que se
+                                revela em cada
+                                detalhe.</p>
+                </section>
+                <!-- cardápio de cafés -->
+                <div class="cardapioImg">
+                        <div id="cafe-cappuccino"></div>
+                        <div id="cafe-latte"></div>
+                        <div id="cafe-expresso"></div>
+                        <div id="cafe-mocha"></div>
+                        <div id="cafe-frappe"></div>
+                </div>
+                <a class="botaoPedido2" href="pedido.html">Fazer pedido</a>
+                <!-- DOCES & SALGADOS -->
+                <section class="cardapio" id="doces-salgados">
+                        <h2>Doces e Salgados</h2>
+                        <h3>A harmonia perfeita está aqui.</h3>
+                        <p>Na SSI Cafeteria, os acompanhamentos são tão especiais quanto o próprio café. Nossos bolos
+                                são feitos com
+                                ingredientes selecionados, trazendo o equilíbrio ideal entre textura e sabor. Já os
+                                salgados são
+                                preparados com cuidado artesanal, garantindo crocância, frescor e recheios generosos que
+                                conquistam cada
+                                paladar. Cada mordida é uma celebração de qualidade, pensada para tornar sua experiência
+                                ainda mais
+                                saborosa. Aqui, café e companhia formam uma dupla imbatível.</p>
+                </section>
+                <!-- cardápio de doces e salgados -->
+                <div class="cardapioImg">
+                        <div id="ds-queijudos"></div>
+                        <div id="ds-croissant"></div>
+                        <div id="ds-tortas"></div>
+                        <div id="ds-cookies"></div>
+                        <div id="ds-sanduiche"></div>
+                </div>
+                <a class="botaoPedido2" href="pedido.html">Fazer pedido</a>
+                <section class="quemSomos" id="quem-somos">
+                        <h2>Quem somos</h2>
+                        <h3>Todo café tem carrega consigo uma história..</h3>
+                        <p>Em meio aos corredores pulsantes de criatividade e inovação do Instituto Federal de Educação,
+                                Ciência e
+                                Tecnologia do Rio Grande do Sul (campus Porto Alegre), nasceu a SSI Cafeteria: um ponto
+                                de encontro onde o aroma
+                                do café fresco se mistura com o som das teclas e o brilho das ideias. Inicialmente
+                                localizada no prédio
+                                principal do IFRS, a cafeteria está agora em uma sede própria, ao lado do instituto, no
+                                antigo edifício da
+                                Mesbla Veículos — totalmente revitalizado e transformado em um espaço pensado para quem
+                                respira código e café.
+                        </p>
+                        <img alt="Foto da SSI Cafeteria" src="./archive/logos/sedeCafeteria.png">
+                        <br>
+                        <p>O nome "SSI" homenageia a área de Sistemas para Internet, um dos pilares do ensino técnico e
+                                superior do
+                                campus, e representa a união entre a paixão por tecnologia e o prazer de uma boa xícara
+                                de café. Mais do que uma
+                                cafeteria, a SSI é um ambiente de conexão — onde estudantes, professores e entusiastas
+                                trocam experiências,
+                                debatem projetos, resolvem bugs e sonham com o futuro.</p>
+                        <br>
+                        <p>Com uma atmosfera acolhedora, wi-fi rápido, tomadas em cada mesa e uma playlist que equilibra
+                                foco e leveza, a
+                                SSI Cafeteria rapidamente se tornou parte da rotina de quem vive a transformação digital
+                                do Rio Grande do Sul e
+                                do Brasil. Aqui, cada gole inspira uma nova linha de código.</p>
+                        <br><br>
+                        <h3>"Não sou da área da tecnologia. E agora?</h3>
+                        <p><strong>Agora... é só chegar! 💛</strong></p>
+                        <br>
+                        <p>Na SSI Cafeteria, o que nos conecta não é só o wi-fi — é a paixão por bons encontros, boas
+                                conversas e, claro,por um café de verdade. Embora estejamos cercados por códigos e
+                                computadores, o nossoambiente é feito paratodos: estudantes, vizinhos, professores,
+                                curiosos e amantes da vida tranquila com uma xícara na mão.
+                                <br><br>
+                                Você não precisa saber programar uma linha de código para se sentir em casa aqui.
+                                Bastagostar de um lugar acolhedor, com cheirinho de café passado na hora, lanches
+                                saborosos e aquele clima gostoso de estar onde a energia é boa. A tecnologia nos
+                                inspira, mas é o café nos une. ☕
+                        </p>
+                </section>
+        </main>
+        <a class="voltarTopo" href="#topo" style="scroll-behavior: smooth;">Voltar para o topo</a>
+        <footer id="contato">
+                <!-- roadmap do site -->
+                <div class="roadmap">
+                        <h4>Navegue pelo site</h4>
+                        <ul>
+                                <li><a href="pedido.html">FAÇA SEU PEDIDO</a></li>
+                                <li><a href="#cafes">Cardápio de Cafés</a></li>
+                                <li><a href="#doces-salgados">Doces &amp; Salgados</a></li>
+                                <li><a href="#quem-somos">Conheça nossa história</a></li>
+                                <li><a href="index.html">Volte para o início</a></li>
+                        </ul>
+                        <br>
+                        <h4>Contatos</h4>
+                        <p>Telefone: (51) 3456-7890</p>
+                        <p>Whatsapp: (51) 9 8765-4321</p>
+                        <p>E-mail: contato@ssicafeteria.com.br</p>
+                </div>
+                <img alt="Logo da cafeteria em cor branca" src="./archive/logos/logo_branca.png">
+                <div class="mapaFooter">
+                        <h4>Nos localize no mapa abaixo:</h4>
+                        <iframe allowfullscreen="" height="450" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1411.0487027971126!2d-51.221550492031376!3d-30.02542889694248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197909d7d74d6d%3A0x895a83e635786474!2sR.%20Comendador%20Manoel%20Pereira%2C%2090%20-%20Centro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS%2C%2090030-010!5e0!3m2!1spt-BR!2sbr!4v1747093609001!5m2!1spt-BR!2sbr"
+                                style="border:0;" width="600"></iframe>
+                </div>
+        </footer>
+        <script src="https://cdn.userway.org/widget.js" data-account="kCDHqw9ltL"></script>
+        <div class="enabled">
+                <div class="active"></div>
+                <div>
+                        <div class="vw-plugin-top-wrapper"></div>
+                </div>
         </div>
-        <!-- View 2: Vídeo para o YouTube -->
-        <div class="carBanner">
-          <a href="https://youtu.be/wXpdFNe4Ejw?si=VYrFKCUH7gCbH2-R" target="_blank">
-            <img src="/archive/logos/2.png" alt="Vídeo do YouTube">
-          </a>
+
+        <div vw class="enabled">
+                <div vw-access-button class="active"></div>
+                <div vw-plugin-wrapper>
+                        <div class="vw-plugin-top-wrapper"></div>
+                </div>
         </div>
-        <!-- View 3: Foto com chamada -->
-        <div class="carBanner">
-          <a href="#doces-salgados">
-            <img src="/archive/logos/3.png" alt="Produto para compra">
-          </a>
-        </div>
-      </div>
-      <button class="prev-btn">❮</button>
-      <button class="next-btn">❯</button>
-    </div>
-
-
-    <!-- CARDS -->
-    <section class="cards">
-      <section class="card">
-        <img src="/archive/logos/card2.png" alt="">
-        <h2>Para toda hora</h2>
-        <p>Café é sempre uma boa ideia né. Que tal uma xícara de café agora?</p>
-        <a href="pedido.html"><button class="card-button">Eu quero!</button></a>
-      </section>
-
-      <section class="card">
-        <img src="/archive/logos/card1.png" alt="">
-        <h2>Take-away</h2>
-        <p>Praticidade no dia a dia. Seu café favorito, te acompanhando onde for.</p>.
-        <a href="pedido.html"><button class="card-button">Peça o seu!</button></a>
-      </section>
-
-      <section class="card">
-        <img src="/archive/logos/card3.png" alt="">
-        <h2>O pedido ideal</h2>
-        <p>Café bom, é café acompanahdo. Os melhores salgados e doces pra você.</p>
-        <a href="#doces-salgados"><button class="card-button">Confira!</button></a>
-      </section>
-    </section>
-
-    <!-- CAFÉS -->
-    <section class="cardapio" id="cafes">
-      <h2>Cafés</h2>
-      <h3>A experiência perfeita começa aqui.</h3>
-      <p>Na SSI Cafeteria, cada xícara é um convite para descobrir o verdadeiro sabor do café. Selecionamos os
-        grãos mais finos, cultivados com paixão e torrados com precisão, garantindo um equilíbrio impecável
-        entre aroma, textura e sabor. Aqui, o café é mais do que uma bebida: é uma arte que se revela em cada
-        detalhe.</p>
-    </section>
-
-    <!-- cardápio de cafés -->
-    <div class="cardapioImg">
-      <div id="cafe-cappuccino"></div>
-      <div id="cafe-latte"></div>
-      <div id="cafe-expresso"></div>
-      <div id="cafe-mocha"></div>
-      <div id="cafe-frappe"></div>
-    </div>
-
-    <a href="pedido.html" class="botaoPedido2">Fazer pedido</a>
-    <!-- DOCES & SALGADOS -->
-    <section class="cardapio" id="doces-salgados">
-      <h2>Doces e Salgados</h2>
-      <h3>A harmonia perfeita está aqui.</h3>
-      <p>Na SSI Cafeteria, os acompanhamentos são tão especiais quanto o próprio café. Nossos bolos são feitos com
-        ingredientes selecionados, trazendo o equilíbrio ideal entre textura e sabor. Já os salgados são
-        preparados com cuidado artesanal, garantindo crocância, frescor e recheios generosos que conquistam cada
-        paladar. Cada mordida é uma celebração de qualidade, pensada para tornar sua experiência ainda mais
-        saborosa. Aqui, café e companhia formam uma dupla imbatível.</p>
-    </section>
-
-    <!-- cardápio de doces e salgados -->
-    <div class="cardapioImg">
-      <div id="ds-queijudos"></div>
-      <div id="ds-croissant"></div>
-      <div id="ds-tortas"></div>
-      <div id="ds-cookies"></div>
-      <div id="ds-sanduiche"></div>
-    </div>
-
-    <a href="pedido.html" class="botaoPedido2">Fazer pedido</a>
-
-    <section class="quemSomos" id="quem-somos">
-      <h2>Quem somos</h2>
-      <h3>Todo café tem carrega consigo uma história..</h3>
-      <p>Em meio aos corredores pulsantes de criatividade e inovação do Instituto Federal de Educação, Ciência e
-        Tecnologia do Rio Grande do Sul (campus Porto Alegre), nasceu a SSI Cafeteria: um ponto de encontro onde o aroma
-        do café fresco se mistura com o som das teclas e o brilho das ideias. Inicialmente localizada no prédio
-        principal do IFRS, a cafeteria está agora em uma sede própria, ao lado do instituto, no antigo edifício da
-        Mesbla Veículos — totalmente revitalizado e transformado em um espaço pensado para quem respira código e café.
-      </p>
-      <img src="/archive/logos/sedeCafeteria.png" alt="Foto da SSI Cafeteria">
-      <br>
-      <p>O nome "SSI" homenageia a área de Sistemas para Internet, um dos pilares do ensino técnico e superior do
-        campus, e representa a união entre a paixão por tecnologia e o prazer de uma boa xícara de café. Mais do que uma
-        cafeteria, a SSI é um ambiente de conexão — onde estudantes, professores e entusiastas trocam experiências,
-        debatem projetos, resolvem bugs e sonham com o futuro.</p>
-      <br>
-      <p>Com uma atmosfera acolhedora, wi-fi rápido, tomadas em cada mesa e uma playlist que equilibra foco e leveza, a
-        SSI Cafeteria rapidamente se tornou parte da rotina de quem vive a transformação digital do Rio Grande do Sul e
-        do Brasil. Aqui, cada gole inspira uma nova linha de código.</p>
-      <br><br>
-      <h3>"Não sou da área da tecnologia. E agora?</h3>
-      <p><strong>Agora... é só chegar! 💛</strong></p>
-      <br>
-      <p>Na SSI Cafeteria, o que nos conecta não é só o wi-fi — é a paixão por bons encontros, boas conversas e, claro,
-        por um café de verdade. Embora estejamos cercados por códigos e computadores, o nosso ambiente é feito para
-        todos: estudantes, vizinhos, professores, curiosos e amantes da vida tranquila com uma xícara na mão.
-        <br><br>
-        Você não precisa saber programar uma linha de código para se sentir em casa aqui. Basta gostar de um lugar
-        acolhedor, com cheirinho de café passado na hora, lanches saborosos e aquele clima gostoso de estar onde a
-        energia é boa.
-        A tecnologia nos inspira, mas é o café nos une. ☕
-      </p>
-    </section>
-  </main>
-
-  <a href="#topo" class="voltarTopo" style="scroll-behavior: smooth;">Voltar para o topo</a>
-
-  <footer id="contato">
-    <!-- roadmap do site -->
-    <div class="roadmap">
-      <h4>Navegue pelo site</h4>
-      <ul>
-        <li><a href="pedido.html">FAÇA SEU PEDIDO</a></li>
-        <li><a href="#cafes">Cardápio de Cafés</a></li>
-        <li><a href="#doces-salgados">Doces & Salgados</a></li>
-        <li><a href="#quem-somos">Conheça nossa história</a></li>
-        <li><a href="index.html">Volte para o início</a></li>
-      </ul>
-      <br>
-      <h4>Contatos</h4>
-      <p>Telefone: (51) 3456-7890</p>
-      <p>Whatsapp: (51) 9 8765-4321</p>
-      <p>E-mail: contato@ssicafeteria.com.br</p>
-
-    </div>
-
-    <img src="/archive/logos/logo_branca.png" alt="">
-
-    <div class="mapaFooter">
-      <h4>Nos localize no mapa abaixo:</h4>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1411.0487027971126!2d-51.221550492031376!3d-30.02542889694248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197909d7d74d6d%3A0x895a83e635786474!2sR.%20Comendador%20Manoel%20Pereira%2C%2090%20-%20Centro%20Hist%C3%B3rico%2C%20Porto%20Alegre%20-%20RS%2C%2090030-010!5e0!3m2!1spt-BR!2sbr!4v1747093609001!5m2!1spt-BR!2sbr"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </footer>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+                new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
 </body>
 
 </html>
